@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1C99E0</color>
+    <color name="colorPrimaryDark">#1C99E0</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="chatBackground">#ebebeb</color>
+    <color name="voice">#727272</color>
+    <color name="transparent">#00000000</color>
+    <color name="colorTitle">#1C99E0</color>
+    <color name="titleTextcolor">#ffffff</color>
+    <color name="white">#fff</color>
+    <color name="gray">#f5f5f5</color>
+    <color name="main">#222222</color>
+    <color name="chat_time">#d2d2d2</color>
+</resources>

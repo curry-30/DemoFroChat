@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/lin_root"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:fitsSystemWindows="true"
+              android:background="@color/chatBackground"
+              tools:context="com.phy.demofrovoice.ui.activity.ChatActivity">
+    <RelativeLayout
+        android:id="@+id/rel_titileBar"
+        style="@style/titlebarWithback">
+        <ImageView
+            android:id="@+id/img_back_chatActivity"
+            android:layout_centerVertical="true"
+            style="@style/ImgBack"/>
+        <TextView
+            android:id="@+id/tv_personName_chatActivity"
+            android:text="无效联系人"
+            android:layout_centerInParent="true"
+            android:textSize="18sp"
+            style="@style/TitleText"/>
+        <ImageView
+            android:id="@+id/img_personInfo_chatActivity"
+            style="@style/TitleImg"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/linkman"/>
+    </RelativeLayout>
+
+    <com.phy.demofrovoice.ui.view.DropdownListView
+        android:id="@+id/lv_Chat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="4dp"
+        android:layout_weight="1"
+        android:background="@color/chatBackground"
+        android:cacheColorHint="@color/transparent"
+        android:divider="@null"
+        android:listSelector="@color/transparent"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#d4d4d4" />
+
+    <LinearLayout
+        android:id="@+id/lin_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/itemPadding12_dp"
+            android:paddingRight="@dimen/itemPadding12_dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/chat_bottom_shape" >
+
+            <ImageView
+                android:id="@+id/img_voice"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/voice"
+                 />
+            <ImageView
+                android:id="@+id/img_write"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/write"
+                android:visibility="gone" />
+
+            <com.phy.demofrovoice.ui.view.MyEditText
+                android:id="@+id/edinput_sms"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="32dp"
+                android:layout_marginLeft="9dp"
+                android:layout_marginRight="9dp"
+                android:background="@drawable/input_background"
+                android:singleLine="true"
+                android:hint="@string/edittext_input"
+                android:textColorHint="#b8b8b8"
+                android:padding="4dip"
+                android:textSize="14sp"
+                android:visibility="visible"/>
+            <com.phy.demofrovoice.ui.view.AudioRecordButton
+                android:id="@+id/btn_voice"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="32dp"
+                android:layout_marginLeft="18dp"
+                android:layout_marginRight="18dp"
+                android:background="@drawable/button_recordnormal"
+                android:padding="4dip"
+                android:text="@string/normal"
+                android:textSize="14sp"
+                android:textColor="@color/voice"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:id="@+id/img_faces"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="12dp"
+                android:src="@drawable/expression"
+                android:gravity="center"
+                android:visibility="gone"/>
+            <ImageView
+                android:id="@+id/img_add"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="8dp"
+                android:src="@drawable/add_dialog"
+                android:gravity="center"
+                />
+            <Button
+                android:id="@+id/btn_sendSms"
+                android:layout_width="40dp"
+                android:layout_height="28dp"
+                android:padding="2dp"
+                android:text="@string/send"
+                android:textColor="@color/white"
+                android:background="@drawable/send_button_shape"
+                android:gravity="center"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.1dp"
+            android:background="#d4d4d4" />
+
+        <include
+            android:id="@+id/chat_face_container"
+            layout="@layout/chat_face_container"
+            android:visibility="gone" />
+        <include
+            android:id="@+id/chat_add_container"
+            layout="@layout/chat_add_container"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+</LinearLayout>
+

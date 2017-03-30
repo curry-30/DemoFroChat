@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:paddingLeft="@dimen/itemPadding12_dp"
+    android:paddingRight="@dimen/itemPadding12_dp">
+
+    <TextView
+        android:id="@+id/chat_time"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/chat_time"
+        android:padding="3dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        android:text=""/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/itemPadding10_dp"
+        android:layout_below="@id/chat_time" >
+        <LinearLayout
+            android:id="@+id/chart_from_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="48dp"
+            android:background="@color/transparent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:visibility="visible" >
+
+            <com.phy.demofrovoice.ui.view.CircleImageView
+                android:id="@+id/chatfrom_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginRight="6dp"
+                android:src="@drawable/default_avatar" />
+
+            <TextView
+                android:id="@+id/chatfrom_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/chatfrom_bg"
+                android:textColor="@color/main"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="14dp"
+                android:paddingRight="8dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/chart_to_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="48dp"
+            android:layout_alignParentRight="true"
+            android:background="@color/transparent" >
+
+            <com.phy.demofrovoice.ui.view.CircleImageView
+                android:id="@+id/chatto_icon"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginLeft="6dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@drawable/default_avatar" />
+
+            <TextView
+                android:id="@+id/chatto_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/chatto_icon"
+                android:background="@drawable/chatto_bg"
+                android:layout_centerVertical="true"
+                android:textColor="@color/main"
+                android:textSize="16sp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="14dp"
+                android:visibility="visible"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>
